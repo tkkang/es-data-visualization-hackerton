@@ -23,25 +23,43 @@
     </div>
 </div>
 
-<div class="container" style="margin-top: 40px">
+<div class="container" style="margin-top: 60px">
 
-    <div class="starter-template">
-        <h1>Impression Histogram</h1>
-        {{jsonData}}
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
 
-        <hr>
-        
-        <nvd3-line-chart 
-          data="exampleData" 
-          id="exampleId" 
-          xAxisTickFormat="xAxisTickFormatFunction()" 
-          yAxisTickFormat="yAxisTickFormatFunction()" 
-          width="550" 
-          height="350" 
-          showXAxis="true" 
-          showYAxis="true">
-            <svg></svg>
-        </nvd3-line-chart>
+            <button type="button" ng-click="getImpression()" class="btn btn-default">Impression Histogram</button>
+          </div>
+
+          <div class="panel-body">
+            <div class="col-xs-12 col-md-12">
+              <nvd3-line-chart
+                  data="data1"
+                  id="exampleId2"
+                  xAxisTickFormat="xAxisTickFormatFunction()"
+                  width="550"
+                  height="350"
+                  showXAxis="true"
+                  showYAxis="true">
+                    <svg></svg>
+              </nvd3-line-chart>
+              <nvd3-multi-bar-chart
+                  data="data2"
+                  id="exampleId3"
+                  xAxisTickFormat="xAxisTickFormatFunction()"
+                  width="550"
+                  height="350"
+                  showXAxis="true"
+                  showYAxis="true">
+                    <svg></svg>
+              </nvd3-multi-bar-chart>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
 </div>
