@@ -29,25 +29,16 @@
       <div class="col-xs-12 col-md-12">
         <div class="panel panel-default">
           <div class="panel-heading">
-
             <button type="button" ng-click="getImpression()" class="btn btn-default">Impression Histogram</button>
           </div>
 
           <div class="panel-body">
+
+            <!-- angular-nvd3-directives -->
             <div class="col-xs-12 col-md-12">
-              <nvd3-line-chart
-                  data="data1"
-                  id="exampleId2"
-                  xAxisTickFormat="xAxisTickFormatFunction()"
-                  width="550"
-                  height="350"
-                  showXAxis="true"
-                  showYAxis="true">
-                    <svg></svg>
-              </nvd3-line-chart>
               <nvd3-multi-bar-chart
-                  data="data2"
-                  id="exampleId3"
+                  data="impressionData"
+                  id="dataId"
                   xAxisTickFormat="xAxisTickFormatFunction()"
                   width="550"
                   height="350"

@@ -61,25 +61,12 @@ angular.module('esvisualizationApp')
           fixData[idx] = [impression.key, impression.doc_count];
          });
 
-         $scope.data1 = [
+         $scope.impressionData = [
             {
               "key": "Series 1",
               "values": fixData
             }
           ];
-
-         var fixData2 = [];
-         angular.forEach(impressions, function(impression, idx) {
-          fixData2[idx] = [impression.key, impression.doc_count];
-         });
-
-         $scope.data2 = [
-            {
-              "key": "Series 1",
-              "values": fixData2
-            }
-          ];
-
         $scope.$apply();
       });
     }
